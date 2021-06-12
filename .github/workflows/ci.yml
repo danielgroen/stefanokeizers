@@ -1,0 +1,68 @@
+name: Continious intergration
+on:
+  push:
+    branches:
+      - main
+      - master
+      - develop
+jobs:
+  cicd:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [14]
+
+    steps:
+      # PREPERATION
+      - name: 🛎 Checkout
+        uses: actions/checkout@v2
+
+      # INSTALL
+      - name: 🏗 Setup node env
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: 🔮 Cache node_modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: 👨🏻‍💻 Install
+        run: npm ci
+
+      # LINT
+      - name: 👀 Lint
+        run: npm run lint
+
+      # TEST
+      - name: 🧪 Test
+        run: npm run test:ci
+
+      # BUILD
+      - name: 🛠 Build
+        run: npm run build
+
+      # GENERATE
+      - name: 📦 Generate
+        run: npm run generate
+
+      # DEPLOYMENT
+      - name: 🚀 Deployment
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+
+      # LIGHTHOUSE CI
+      - name: 📈 Statistics report
+        run: |
+          npm install -g @lhci/cli@0.7.x
+          lhci autorun
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
