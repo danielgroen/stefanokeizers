@@ -20,6 +20,14 @@
     />
   </svg>
 </template>
+<script lang="ts">
+import { defineComponent } from '@vue/composition-api'
+
+export default defineComponent({
+  name: 'AtomNavItem',
+  setup() {},
+})
+</script>
 
 <style>
 .NuxtLogo {

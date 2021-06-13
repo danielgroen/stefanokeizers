@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div>
-      <AtomLogo />
+      <AtomNavItem />
       <h1 class="title">stefanokeizers</h1>
       <div class="links">
         <a

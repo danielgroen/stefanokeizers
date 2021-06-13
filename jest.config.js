@@ -3,6 +3,10 @@ module.exports = {
     '^@/(.*)$': '<rootDir>/$1',
     '^~/(.*)$': '<rootDir>/$1',
     '^vue$': 'vue/dist/vue.common.js',
+
+    '^@atom/(.*)$': '<rootDir>/components/Atom/$1',
+    '^@molecule/(.*)$': '<rootDir>/components/Molecule/$1',
+    '^@organism/(.*)$': '<rootDir>/components/Organism/$1',
   },
   moduleFileExtensions: ['ts', 'js', 'vue', 'json'],
   transform: {
