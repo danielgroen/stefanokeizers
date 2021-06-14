@@ -26,12 +26,15 @@
     }
   },
   "dependencies": {
+    "@nuxt/content": "^1.14.0",
+    "@nuxtjs/component-cache": "^1.1.6",
     "@nuxtjs/composition-api": "^0.24.4",
     "@nuxtjs/svg": "^0.1.12",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/github": "^7.2.3",
     "core-js": "^3.9.1",
-    "nuxt": "^2.15.3"
+    "nuxt": "^2.15.3",
+    "nuxt-font-loader-strategy": "^1.1.10"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",

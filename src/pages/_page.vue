@@ -1,8 +1,8 @@
 <template>
-  <div class="container">
+  <div v-if="content" class="container">
     <div>
+      <h1>{{ content.title }}</h1>
       <AtomNavItem />
-      <h1 class="title">stefanokeizers</h1>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
@@ -26,14 +26,22 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { defineComponent } from '@nuxtjs/composition-api'
 
-export default Vue.extend({})
+import useFetch from '~/composables/useFetch'
+
+export default defineComponent({
+  name: 'Page',
+  setup() {
+    const { content, getJson } = useFetch()
+
+    return { content, getJson }
+  },
+})
 </script>
 
 <style lang="scss">
 .container {
   display: block;
-  color: red;
 }
 </style>

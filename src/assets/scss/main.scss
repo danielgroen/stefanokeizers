@@ -1,0 +1,25 @@
+@import 'variables/index';
+@import 'utils/index';
+
+* {
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+  }
+}
+
+body,
+html {
+  background-color: $white;
+  font-family: $font-family-primary;
+  scroll-behavior: smooth;
+}
+
+input,
+textarea,
+select,
+button,
+a {
+  outline: none;
+}

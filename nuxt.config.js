@@ -50,7 +50,7 @@ export default {
     API: 'https://api.ntk.nl/',
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['~/assets/scss/main.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -66,17 +66,62 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
+    '@nuxtjs/composition-api/module',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/svg', 'nuxt-rfg-icon', '@nuxtjs/manifest'],
-
+  modules: [
+    '@nuxtjs/svg',
+    'nuxt-rfg-icon',
+    '@nuxtjs/manifest',
+    '@nuxt/content',
+    '@nuxtjs/component-cache',
+    [
+      'nuxt-font-loader-strategy',
+      {
+        ignoredEffectiveTypes: ['2g', 'slow-2g'],
+        fonts: [
+          {
+            fileExtensions: ['ttf'],
+            fontFamily: 'Source Sans Pro',
+            fontFaces: [
+              {
+                preload: true,
+                src: '@/assets/fonts/SourceSansPro-Regular',
+                fontWeight: 400,
+                fontStyle: 'normal',
+              },
+              {
+                preload: true,
+                src: '@/assets/fonts/SourceSansPro-SemiBold',
+                fontWeight: 600,
+                fontStyle: 'normal',
+              },
+              {
+                preload: true,
+                src: '@/assets/fonts/SourceSansPro-Bold',
+                fontWeight: 700,
+                fontStyle: 'normal',
+              },
+              {
+                preload: true,
+                src: '@/assets/fonts/SourceSansPro-Black',
+                fontWeight: 900,
+                fontStyle: 'normal',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  ],
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
-
   generate: {
     dir: '../dist',
+    // TODO:: remove below, temp fix for nuxt composition, they gona fix it
+    interval: 2000,
   },
 }

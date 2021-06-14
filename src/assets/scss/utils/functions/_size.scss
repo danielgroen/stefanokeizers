@@ -1,0 +1,31 @@
+@use "sass:math";
+
+$base-font-size: 16px !default;
+
+@function rem-calc($value, $base-value: $base-font-size) {
+  $value: math.div(strip-unit($value), strip-unit($base-value)) * 1rem;
+  /* stylelint-disable-next-line */
+  @if ($value == 0rem) {
+    $value: 0;
+  } // Turn 0rem into 0
+
+  @return $value;
+}
+
+@function rem($values) {
+  $sizes: null;
+
+  @if length($values) > 1 {
+    @each $size in $values {
+      @if $sizes == null {
+        $sizes: #{rem-calc($size)};
+      } @else {
+        $sizes: $sizes #{rem-calc($size)};
+      }
+    }
+  } @else {
+    $sizes: rem-calc($values);
+  }
+
+  @return $sizes;
+}

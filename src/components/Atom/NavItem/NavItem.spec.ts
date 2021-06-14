@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-// @ts-ignore
+// @ts-ignore-next-line
 import AtomNavItem from './NavItem.vue'
 
 const wrapper = mount(AtomNavItem, {

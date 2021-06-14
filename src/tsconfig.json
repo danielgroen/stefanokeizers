@@ -26,12 +26,14 @@
     "types": [
       "@nuxt/types",
       "@types/node",
-      "@types/jest"
+      "@types/jest",
+      "@nuxt/content",
     ]
   },
   "exclude": [
     "node_modules",
     ".nuxt",
-    "dist"
+    "@nuxtjs/composition-api/dist/runtime/index.mjs",
+    "dist",
   ]
 }
