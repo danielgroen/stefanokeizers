@@ -1,7 +1,7 @@
 const site = {
-  title: 'Test',
-  description: 'test',
-  keywords: 'test',
+  title: 'Stefano Keizers',
+  description: 'Dit is de website van Stefano Keizers',
+  keywords: 'Stefano Keizers, theater, toneel, show, presentator',
 }
 
 export default {
@@ -21,8 +21,27 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      // TODO:: keywordds, description enzo
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: site.description },
+      { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
+      { name: 'description', content: site.description },
+      { name: 'keywords', content: site.keywords },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'HandheldFriendly', content: 'True' },
+      { name: 'author', content: site.title },
+      { name: 'MobileOptimized', content: '320' },
+      { name: 'robots', content: 'index, nofollow' },
+      { name: 'last-modified', content: 'Sun, 3 Sep 2017 14:00:46 GMT ' },
+      { name: 'cache-control', content: 'Private' },
+      { name: 'Expires', content: '600' },
+      { property: 'og:title', content: site.title },
+      {
+        property: 'og:image',
+        content: '/img/stefano-hoofd.jpg',
+      },
+      { property: 'og:url', content: 'https://stefanokeizers.nl/' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:description', content: site.description },
+      { property: 'og:site_name', content: site.title },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
@@ -52,7 +71,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/svg'],
+  modules: ['@nuxtjs/svg', 'nuxt-rfg-icon', '@nuxtjs/manifest'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
