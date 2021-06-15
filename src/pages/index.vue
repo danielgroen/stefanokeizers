@@ -1,9 +1,6 @@
 <template>
   <div v-if="content" class="container">
-    <div>
-      <h1>{{ content.title }}</h1>
-      <AtomNavItem />
-    </div>
+    <OrganismBlockTemplates :blocks="content" />
   </div>
 </template>
 
@@ -15,9 +12,9 @@ import useFetch from '~/composables/useFetch'
 export default defineComponent({
   name: 'Page',
   setup() {
-    const { content, getJson } = useFetch()
+    const { content } = useFetch()
 
-    return { content, getJson }
+    return { content }
   },
 })
 </script>

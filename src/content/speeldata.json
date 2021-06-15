@@ -1,3 +1,10 @@
 {
-  "title": "speeldata"
+  "content": [
+    {
+      "block": "speeldata",
+      "title": "Stefano Keizers",
+      "subtitle": "Hans Teeuwen",
+      "iframe": "https://www.ntk.nl/embed/stefano-keizers"
+    }
+  ]
 }

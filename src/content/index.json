@@ -1,3 +1,79 @@
 {
-  "title": "Homepage"
+  "content": [
+    {
+      "block": "head",
+      "title": "Stefano Keizers",
+      "subtitle": "Hans Teeuwen",
+      "button": {
+        "text": "Speeldata",
+        "to": "/speeldata"
+      },
+      "video": "https://vimeo.com/262345136"
+    },
+    {
+      "block": "media",
+      "media_items": [
+        {
+          "text": "Mijn Naam Is Stefano Keizers",
+          "url": "https://www.2doc.nl/documentaires/series/3doc/2020/mijn-naam-is-stefano-keizers.html"
+        },
+        {
+          "text": "Het Perfecte Plaatje",
+          "url": "https://www.videoland.com/series/1099/het-perfecte-plaatje/3823"
+        },
+        {
+          "text": "Rooijackers Over De Vloer",
+          "url": "https://www.videoland.com/player/84661/stefano-keizers/500159"
+        },
+        {
+          "text": "Herres",
+          "url": "https://www.npo3.nl/hallosintervalenkerst-nieuw-herres-7/05-04-2021/WO_POWN_16409909"
+        },
+        {
+          "text": "Experimensen",
+          "url": "https://www.npo3.nl/experimensen/AT_2107362"
+        },
+        {
+          "text": "Twee Luitenanten",
+          "url": "https://lebowskipublishers.nl/boek/Twee-Luitenanten-T11796.html"
+        },
+        {
+          "text": "Maestro",
+          "url": "https://www.youtube.com/watch?v=LqPM_oiA6m0&list=PL_Iu3jNPL3fI5Yshb8EytNLbkmCpJGyxy"
+        },
+        {
+          "text": "Dit Is Niet Mijn Wereld Vriend",
+          "url": "https://www.powned.tv/programmas/dit-is-niet-mijn-wereld-vriend/marco-kroon-vs-stefano-keizers"
+        },
+        {
+          "text": "Tims^Tent ",
+          "url": "https://www.vpro.nl/programmas/tims-tent/kijk/afleveringen/seizoen-3/stefano-keizers.html"
+        },
+        {
+          "text": "De Slimste Mens",
+          "url": "https://tvblik.nl/de-slimste-mens/2-januari-2017"
+        }
+      ]
+    },
+    {
+      "block": "footer",
+      "title": "Contact",
+      "contact": [
+        {
+          "title": "Management en (pers)vragen",
+          "text": "Jelle Kuiper Producties",
+          "email": "stefano@jellekuiperproducties.nl",
+          "phone": "020 772 45 79"
+        },
+        {
+          "title": "Theaterboekingen",
+          "text": "Senf / de Bogen theaterproducties",
+          "email": "Huub.van.den.Heuvel@senf.nl"
+        }
+      ],
+      "facebook": "https://www.facebook.com/stefanokeizers/",
+      "instagram": "https://www.instagram.com/stefano_keizers/",
+      "twitter": "https://twitter.com/stefanokeizers"
+    }
+  ]
 }

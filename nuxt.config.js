@@ -79,6 +79,8 @@ export default {
     '@nuxtjs/manifest',
     '@nuxtjs/sitemap',
     '@nuxt/content',
+    '@nuxtjs/style-resources',
+    '@nuxtjs/gtm',
     '@nuxtjs/robots',
     '@nuxtjs/component-cache',
     [
@@ -120,18 +122,34 @@ export default {
       },
     ],
   ],
+
+  gtm: {
+    id: 'UA-106728519-1',
+  },
+
+  styleResources: {
+    scss: [
+      '~/assets/scss/variables/_index.scss',
+      '~/assets/scss/utils/_index.scss',
+      '~/assets/scss/extends/_index.scss',
+    ],
+  },
+
   router: {
     trailingSlash: true,
   },
+
   sitemap: {
     hostname: site.hostname,
     trailingSlash: true,
   },
+
   robots: {
     UserAgent: '*',
     Disallow: '/',
     Sitemap: `${site.hostname}/sitemap.xml`,
   },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
   generate: {

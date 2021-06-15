@@ -7,8 +7,7 @@ export default function useFetch() {
   const content = ref()
 
   const getJson = async () => {
-    const curPath = route.value.params.pathMatch || route.value.name || 'index'
-    console.log(route.value, curPath)
+    const curPath = route.value.params.pathMatch || route.value.name
     content.value = await $content(curPath)
       .fetch()
       .catch(() => router.push('/'))
