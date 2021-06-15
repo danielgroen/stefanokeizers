@@ -121,7 +121,7 @@ export default {
   build: {},
   generate: {
     dir: '../dist',
-    fallback: 'index.html',
+    fallback: true,
     // TODO:: remove below, temp fix for nuxt composition, they gona fix it
     interval: 2000,
   },
