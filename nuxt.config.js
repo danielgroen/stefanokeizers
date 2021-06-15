@@ -1,5 +1,6 @@
 const site = {
   title: 'Stefano Keizers',
+  hostname: 'https://stefanokeizers.nl',
   description: 'Dit is de website van Stefano Keizers',
   keywords: 'Stefano Keizers, theater, toneel, show, presentator',
 }
@@ -38,7 +39,7 @@ export default {
         property: 'og:image',
         content: '/img/stefano-hoofd.jpg',
       },
-      { property: 'og:url', content: 'https://stefanokeizers.nl/' },
+      { property: 'og:url', content: site.hostname },
       { property: 'og:type', content: 'website' },
       { property: 'og:description', content: site.description },
       { property: 'og:site_name', content: site.title },
@@ -76,6 +77,7 @@ export default {
     '@nuxtjs/svg',
     'nuxt-rfg-icon',
     '@nuxtjs/manifest',
+    '@nuxtjs/sitemap',
     '@nuxt/content',
     '@nuxtjs/component-cache',
     [
@@ -118,21 +120,12 @@ export default {
     ],
   ],
   router: {
-    trailingSlash: false,
+    trailingSlash: true,
   },
-  redirect: [
-    {
-      // eslint-disable-next-line
-      from: '(?!^/$|^/[?].*$)(.*/[?](.*)$|.*/$)',
-      // eslint-disable-next-line
-      to: (from, req) => {
-        const base = req._parsedUrl.pathname.replace(/\/$/, '')
-        const search = req._parsedUrl.search
-        return base + (search != null ? search : '')
-      },
-      statusCode: 301,
-    },
-  ],
+  sitemap: {
+    hostname: site.hostname,
+    trailingSlash: true,
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
   generate: {
