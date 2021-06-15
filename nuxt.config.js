@@ -120,6 +120,19 @@ export default {
   router: {
     trailingSlash: false,
   },
+  redirect: [
+    {
+      // eslint-disable-next-line
+      from: '(?!^/$|^/[?].*$)(.*/[?](.*)$|.*/$)',
+      // eslint-disable-next-line
+      to: (from, req) => {
+        const base = req._parsedUrl.pathname.replace(/\/$/, '')
+        const search = req._parsedUrl.search
+        return base + (search != null ? search : '')
+      },
+      statusCode: 301,
+    },
+  ],
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
   generate: {

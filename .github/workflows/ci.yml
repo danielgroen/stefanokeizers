@@ -36,13 +36,13 @@ jobs:
       - name: 👨🏻‍💻 Install
         run: npm ci
 
-      # LINT
-      - name: 👀 Lint
-        run: npm run lint
+      # # LINT
+      # - name: 👀 Lint
+      #   run: npm run lint
 
-      # TEST
-      - name: 🧪 Test
-        run: npm run test:ci
+      # # TEST
+      # - name: 🧪 Test
+      #   run: npm run test:ci
 
       # BUILD
       - name: 🛠 Build
