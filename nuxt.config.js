@@ -126,6 +126,11 @@ export default {
     hostname: site.hostname,
     trailingSlash: true,
   },
+  robots: {
+    UserAgent: '*',
+    Disallow: '/',
+    Sitemap: `${site.hostname}/sitemap.xml`,
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
   generate: {
