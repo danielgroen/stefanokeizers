@@ -79,6 +79,7 @@ export default {
     '@nuxtjs/manifest',
     '@nuxtjs/sitemap',
     '@nuxt/content',
+    '@nuxtjs/robots',
     '@nuxtjs/component-cache',
     [
       'nuxt-font-loader-strategy',
