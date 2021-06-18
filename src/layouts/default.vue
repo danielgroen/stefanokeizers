@@ -1,6 +1,6 @@
 <template>
   <main class="layout layout--default">
-    <AtomNavItem />
+    <MoleculeNav />
     <Nuxt />
   </main>
 </template>

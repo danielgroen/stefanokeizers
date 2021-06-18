@@ -1,24 +1,68 @@
 <template>
-  <div>Home</div>
+  <nuxt-link
+    :class="[
+      'nav-item',
+      { 'nav-item--active': title.toLowerCase() === activeItem.toLowerCase() },
+    ]"
+    :to="to.toLowerCase()"
+    @click.native="updateActiveItem(title)"
+    >{{ title }}</nuxt-link
+  >
 </template>
 <script lang="ts">
-import { defineComponent } from '@vue/composition-api'
+import { defineComponent } from '@nuxtjs/composition-api'
+import useActiveItem from '~/composables/useActiveItem'
 
 export default defineComponent({
   name: 'AtomNavItem',
-  setup() {},
+  props: {
+    title: {
+      type: String,
+      required: true,
+    },
+    to: {
+      type: String,
+      required: true,
+    },
+  },
+  setup() {
+    const { activeItem, updateActiveItem } = useActiveItem()
+
+    return { activeItem, updateActiveItem }
+  },
 })
 </script>
 
-<style>
-.NuxtLogo {
-  animation: 1s appear;
-  margin: auto;
-}
+<style lang="scss">
+.nav-item {
+  position: relative;
+  color: $gray;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color $speed $cubic-bezier;
 
-@keyframes appear {
-  0% {
-    opacity: 0;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: $red;
+    transition: left $speed $cubic-bezier, width $speed $cubic-bezier;
+  }
+
+  &:hover,
+  &--active {
+    color: $black;
+  }
+
+  &--active {
+    &::after {
+      left: 0;
+      width: calc(100% + 2px);
+    }
   }
 }
 </style>

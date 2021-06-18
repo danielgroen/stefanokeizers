@@ -9,7 +9,7 @@ import { defineComponent } from '@nuxtjs/composition-api'
 export default defineComponent({
   props: {
     content: {
-      type: Array,
+      type: Object,
       required: true,
     },
   },
