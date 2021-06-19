@@ -1,13 +1,13 @@
 import { mount } from '@vue/test-utils'
-import AtomNavItem from './NavItem.vue'
+import PageIndex from './index.vue'
 
-const wrapper = mount(AtomNavItem, {
+const wrapper = mount(PageIndex, {
   propsData: {
     type: 'nieuws',
   },
 })
 
-describe('🧪 NavItem', () => {
+describe('🧪 PageIndex', () => {
   test(`is here"`, () => {
     expect(wrapper).toBeTruthy()
   })

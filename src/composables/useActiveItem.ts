@@ -5,7 +5,7 @@ const activeItem = ref()
 export default function useFetch() {
   const { route } = useContext()
 
-  const updateActiveItem = (newItem) => {
+  const updateActiveItem = (newItem: string) => {
     activeItem.value = newItem
   }
 

@@ -17,23 +17,23 @@
     "baseUrl": ".",
     "paths": {
       "~/*": [
-        "./*"
+        "src/*"
       ],
       "@/*": [
-        "./*"
+        "src/*"
       ]
     },
     "types": [
       "@nuxt/types",
       "@types/node",
       "@types/jest",
-      "@nuxt/content",
+      "@nuxt/content"
     ]
   },
   "exclude": [
     "node_modules",
     ".nuxt",
     "@nuxtjs/composition-api/dist/runtime/index.mjs",
-    "dist",
+    "dist"
   ]
 }

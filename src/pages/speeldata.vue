@@ -11,7 +11,7 @@ import useActiveItem from '~/composables/useActiveItem'
 import useFetch from '~/composables/useFetch'
 
 export default defineComponent({
-  name: 'Page',
+  name: 'PageSpeeldata',
   setup() {
     const { content } = useFetch()
     const { activeItem } = useActiveItem()

@@ -1,5 +1,6 @@
 <template>
   <nuxt-link
+    v-if="title && activeItem"
     :class="[
       'nav-item',
       { 'nav-item--active': title.toLowerCase() === activeItem.toLowerCase() },

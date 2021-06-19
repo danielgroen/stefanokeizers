@@ -1,12 +1,12 @@
 module.exports = {
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/$1',
-    '^~/(.*)$': '<rootDir>/$1',
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '^~/(.*)$': '<rootDir>/src/$1',
     '^vue$': 'vue/dist/vue.common.js',
 
-    '^@atom/(.*)$': '<rootDir>/components/Atom/$1',
-    '^@molecule/(.*)$': '<rootDir>/components/Molecule/$1',
-    '^@organism/(.*)$': '<rootDir>/components/Organism/$1',
+    '^@atom/(.*)$': '<rootDir>/src/components/Atom/$1',
+    '^@molecule/(.*)$': '<rootDir>/src/components/Molecule/$1',
+    '^@organism/(.*)$': '<rootDir>/src/components/Organism/$1',
   },
   moduleFileExtensions: ['ts', 'js', 'vue', 'json'],
   transform: {
@@ -14,10 +14,12 @@ module.exports = {
     '^.+\\.js$': 'babel-jest',
     '.*\\.(vue)$': 'vue-jest',
   },
-  collectCoverage: true,
+  collectCoverage: false,
+  coverageDirectory: './test/coverage',
+  coverageReporters: ['html', 'text', 'text-summary'],
   collectCoverageFrom: [
-    '<rootDir>/components/**/*.vue',
-    '<rootDir>/pages/**/*.vue',
+    '<rootDir>/src/components/**/*.vue',
+    '<rootDir>/src/pages/**/*.vue',
   ],
   setupFiles: ['./test/jest.init.js'],
   setupFilesAfterEnv: ['./test/jest.setup.js'],
