@@ -21,9 +21,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test && istanbul-badges-readme --coverageDir='test' && git add 'README.md'",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged && npm run test && istanbul-badges-readme --coverageDir='test' && git add 'README.md'",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "dependencies": {

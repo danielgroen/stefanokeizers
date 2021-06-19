@@ -10,7 +10,7 @@
 
 | Statements                  | Branches                | Functions                 | Lines             |
 | --------------------------- | ----------------------- | ------------------------- | ----------------- |
-| ![Statements](#statements#) | ![Branches](#branches#) | ![Functions](#functions#) | ![Lines](#lines#) |
+| ![Statements](https://img.shields.io/badge/statements-52.38%25-red.svg) | ![Branches](https://img.shields.io/badge/branches-100%25-brightgreen.svg) | ![Functions](https://img.shields.io/badge/functions-50%25-red.svg) | ![Lines](https://img.shields.io/badge/lines-52.38%25-red.svg) |
 
 
 ## Build Setup
