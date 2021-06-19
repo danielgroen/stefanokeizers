@@ -6,6 +6,13 @@
 ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/danielgroen/stefanokeizers/nuxt?label=Nuxt&logo=nuxt.js&color=00C58E)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
+## Tests
+
+| Statements                  | Branches                | Functions                 | Lines             |
+| --------------------------- | ----------------------- | ------------------------- | ----------------- |
+| ![Statements](#statements#) | ![Branches](#branches#) | ![Functions](#functions#) | ![Lines](#lines#) |
+
+
 ## Build Setup
 
 ```bash
