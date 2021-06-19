@@ -1,8 +1,8 @@
 <template>
   <div class="blocks">
     <template v-for="(block, index) in blocks.content">
-      <!-- v-if="block.block === 'head'" -->
       <OrganismBlockHeader
+        v-if="block.block === 'head'"
         :key="`block-${index}`"
         class="block"
         :content="block"
@@ -32,6 +32,17 @@ export default defineComponent({
 
   .block {
     background: $red;
+    color: $white;
+    padding: $spacing-s;
+    margin: 0 $spacing-s;
+
+    @include breakpoint($tablet) {
+      padding: $spacing-xxl;
+    }
+
+    @include breakpoint($desktop) {
+      padding: $spacing-xxl-2;
+    }
   }
 }
 </style>

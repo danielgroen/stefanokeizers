@@ -1,5 +1,16 @@
 <template>
-  <div>{{ content }}</div>
+  <div class="block">
+    <h1 class="block__title">{{ content.title }}</h1>
+    <h2 class="block__subtitle">{{ content.subtitle }}</h2>
+    <AtomButton
+      class="block__button"
+      :title="content.button.text"
+      :to="content.button.to"
+      icon="chevron"
+    />
+    <iframe :src="content.video" frameborder="0"></iframe>
+    <div>{{ content }}</div>
+  </div>
 </template>
 
 <script lang="ts">
