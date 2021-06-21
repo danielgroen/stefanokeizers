@@ -3,7 +3,19 @@
     <template v-for="(block, index) in blocks.content">
       <OrganismBlockHeader
         v-if="block.block === 'head'"
-        :key="`block-${index}`"
+        :key="`block-header-${index}`"
+        class="block"
+        :content="block"
+      />
+      <OrganismBlockMedia
+        v-if="block.block === 'media'"
+        :key="`block-media-${index}`"
+        class="block"
+        :content="block"
+      />
+      <OrganismBlockContact
+        v-if="block.block === 'contact'"
+        :key="`block-contact-${index}`"
         class="block"
         :content="block"
       />
@@ -15,6 +27,7 @@
 import { defineComponent } from '@nuxtjs/composition-api'
 
 export default defineComponent({
+  name: 'OrganismBlockTemplates',
   props: {
     blocks: {
       type: Object,
@@ -24,7 +37,7 @@ export default defineComponent({
 })
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .blocks {
   display: grid;
   gap: $spacing-l 0;

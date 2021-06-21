@@ -1,0 +1,26 @@
+%block-base {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .block__title {
+    font-weight: 700;
+    font-size: clamp-calc(24px, 56px);
+    line-height: 1.25;
+    text-transform: uppercase;
+  }
+
+  .block__subtitle {
+    font-size: clamp-calc(24px, 56px);
+    line-height: 1.25;
+    text-transform: uppercase;
+  }
+
+  .block__header {
+    width: 100%;
+    font-weight: 700;
+    font-size: clamp-calc(22px, 36px);
+    line-height: 1.25;
+    margin-bottom: clamp-calc(16px, 24px);
+  }
+}

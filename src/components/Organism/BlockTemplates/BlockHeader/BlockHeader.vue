@@ -2,12 +2,9 @@
   <div id="home" class="block">
     <h1 class="block__title">{{ content.title }}</h1>
     <h2 class="block__subtitle">{{ content.subtitle }}</h2>
-    <AtomButton
-      class="block__button"
-      :title="content.button.text"
-      :to="content.button.to"
-      icon="chevron"
-    />
+    <AtomButton class="block__button" :to="content.button.to" icon="chevron">
+      {{ content.button.text }}<AtomSvg type="arrow" />
+    </AtomButton>
     <iframe class="block__video" :src="content.video" frameborder="0"></iframe>
   </div>
 </template>
@@ -17,6 +14,7 @@ import { defineComponent } from '@nuxtjs/composition-api'
 
 // TODO:: props omzetten naar composables
 export default defineComponent({
+  name: 'OrganismBlockHeader',
   props: {
     content: {
       type: Object,
@@ -28,24 +26,13 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .block {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  @extend %block-base;
 
-  &__title {
-    font-weight: 700;
-    font-size: clamp-calc(24px, 56px);
-    line-height: 1.25;
-    text-transform: uppercase;
-  }
-  &__subtitle {
-    font-size: clamp-calc(24px, 56px);
-    line-height: 1.25;
-    text-transform: uppercase;
+  &__button {
+    margin: $spacing-m 0 $spacing-l-2;
   }
 
   &__video {
-    // width: 100%;
     width: clamp(311px, 50vw, 445px);
     height: calc(clamp(311px, 50vw, 445px) / 16 * 9);
   }

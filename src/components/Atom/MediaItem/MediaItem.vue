@@ -1,15 +1,25 @@
 <template>
-  <nuxt-link v-if="to" class="button" :to="to.toLowerCase()">
-    <slot />
-  </nuxt-link>
+  <a class="media-item" :href="link">
+    <span class="media-item__type">{{ type }}</span>
+    <span class="media-item__title">{{ title }}</span>
+    <AtomSvg type="arrow" />
+  </a>
 </template>
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
 
 export default defineComponent({
-  name: 'AtomButton',
+  name: 'AtomMediaItem',
   props: {
-    to: {
+    type: {
+      type: String,
+      required: true,
+    },
+    title: {
+      type: String,
+      required: true,
+    },
+    link: {
       type: String,
       required: true,
     },
@@ -19,9 +29,10 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.button {
-  display: inline-flex;
-  align-items: center;
+.media-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   box-shadow: $box-shadow-button;
   border-radius: 2px;
   background-color: $white;
@@ -31,14 +42,32 @@ export default defineComponent({
   text-decoration: none;
   transition: transform $speed $cubic-bezier, color $speed $cubic-bezier,
     box-shadow $speed $cubic-bezier;
-  padding: 12px $spacing-m;
+  padding: $spacing-s;
+
+  &__type {
+    color: $gray;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.28;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-size: rem(18px);
+    line-height: 1.27;
+    padding-right: 32px;
+  }
 
   ::v-deep {
     svg {
+      position: absolute;
+      top: 50%;
+      right: $spacing-s;
       box-shadow: 0 0 8px rgba($red, 0.4);
       border-radius: 9999px;
       background-color: $white;
-      margin-left: $spacing-s;
+      transform: translateY(-50%);
+
       path {
         transition: fill $speed $cubic-bezier;
       }
