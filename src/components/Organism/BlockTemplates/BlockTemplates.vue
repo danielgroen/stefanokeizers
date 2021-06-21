@@ -33,15 +33,15 @@ export default defineComponent({
   .block {
     background: $red;
     color: $white;
-    padding: $spacing-s;
-    margin: 0 $spacing-s;
+    padding: clamp-calc(48px, 80px) $spacing-s;
 
-    @include breakpoint($tablet) {
-      padding: $spacing-xxl;
+    @include breakpoint(0, $tablet) {
+      margin: $spacing-s;
     }
 
-    @include breakpoint($desktop) {
-      padding: $spacing-xxl-2;
+    @include breakpoint($tablet) {
+      padding-left: clamp-calc(#{$spacing-s}, 153px);
+      padding-right: clamp-calc(#{$spacing-s}, 153px);
     }
   }
 }

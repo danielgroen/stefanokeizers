@@ -54,12 +54,13 @@ export default defineComponent({
     transition: left $speed $cubic-bezier, width $speed $cubic-bezier;
   }
 
-  &:hover,
-  &--active {
-    color: $black;
+  &:hover {
+    color: $gray-dark;
   }
 
   &--active {
+    color: $black;
+
     &::after {
       left: 0;
       width: calc(100% + 2px);

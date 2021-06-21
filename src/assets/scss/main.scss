@@ -2,6 +2,7 @@
 @import 'utils/index';
 
 * {
+  font-weight: inherit;
   font-size: inherit;
   font-family: inherit;
   -webkit-tap-highlight-color: transparent;
@@ -16,6 +17,7 @@
 body,
 html {
   background-color: $white;
+  font-weight: normal;
   font-size: 1rem;
   font-family: $font-family-primary;
   scroll-behavior: smooth;

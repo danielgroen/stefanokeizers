@@ -1,0 +1,15 @@
+@use "sass:math";
+
+//
+// Let the function do the calculation of the clamp	*/
+//
+
+@function clamp-calc($min, $max, $output: 'px', $max-width: $max-width) {
+  $computed-vw: math.div(strip-unit($max), strip-unit($max-width)) * 100vw;
+
+  @if $output == 'rem' {
+    @return clamp(#{rem($min)}, #{$computed-vw}, #{rem($max)});
+  } @else {
+    @return clamp(#{$min}, #{$computed-vw}, #{$max});
+  }
+}

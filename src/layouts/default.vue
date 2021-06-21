@@ -13,10 +13,7 @@
     max-width: calc(100% - #{$spacing-l * 2});
   }
 
-  @include breakpoint($desktop) {
-    max-width: calc(100% - #{$spacing-xxl * 2});
-  }
-  @include breakpoint(#{$max-width + ($spacing-xxl * 2)}) {
+  @include breakpoint(#{$max-width + $spacing-xl}) {
     max-width: $max-width;
   }
 }
