@@ -19,6 +19,12 @@
         class="block"
         :content="block"
       />
+      <OrganismBlockCalendar
+        v-if="block.block === 'calendar'"
+        :key="`block-calendar-${index}`"
+        class="block"
+        :content="block"
+      />
     </template>
   </div>
 </template>

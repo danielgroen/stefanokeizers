@@ -46,7 +46,7 @@ export default defineComponent({
   &::after {
     content: '';
     position: absolute;
-    bottom: -4px;
+    bottom: -2px;
     left: 50%;
     width: 0;
     height: 2px;
