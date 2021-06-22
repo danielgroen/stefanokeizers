@@ -21,6 +21,10 @@ export default defineComponent({
   display: flex;
   justify-content: center;
   gap: $spacing-l;
-  padding: $spacing-l 0;
+  padding: 32px 0;
+
+  @include breakpoint($tablet) {
+    padding: 40px 0;
+  }
 }
 </style>

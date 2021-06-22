@@ -38,7 +38,6 @@ export default defineComponent({
   background-color: $white;
   color: $black;
   font-weight: 600;
-  font-size: 16px;
   text-decoration: none;
   transition: transform $speed $cubic-bezier, color $speed $cubic-bezier,
     box-shadow $speed $cubic-bezier;
@@ -47,13 +46,13 @@ export default defineComponent({
   &__type {
     color: $gray;
     font-weight: 400;
-    font-size: 14px;
+    font-size: clamp-calc(14px, 16px);
     line-height: 1.28;
     text-transform: uppercase;
   }
 
   &__title {
-    font-size: rem(18px);
+    font-size: clamp-calc(16px, 18px);
     line-height: 1.27;
     padding-right: 32px;
   }

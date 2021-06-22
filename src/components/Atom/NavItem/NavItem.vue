@@ -61,9 +61,12 @@ export default defineComponent({
   &--active {
     color: $black;
 
-    &::after {
-      left: 0;
-      width: calc(100% + 2px);
+    &:first-child,
+    &:last-child {
+      &::after {
+        left: 0;
+        width: calc(100% + 2px);
+      }
     }
   }
 }

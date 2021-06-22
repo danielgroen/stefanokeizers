@@ -27,7 +27,7 @@ export default defineComponent({
   background-color: $white;
   color: $black;
   font-weight: 600;
-  font-size: 16px;
+  font-size: clamp-calc(16px, 24px);
   text-decoration: none;
   transition: transform $speed $cubic-bezier, color $speed $cubic-bezier,
     box-shadow $speed $cubic-bezier;

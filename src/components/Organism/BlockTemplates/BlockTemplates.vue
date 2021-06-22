@@ -54,9 +54,9 @@ export default defineComponent({
     color: $white;
     padding: clamp-calc(48px, 80px) $spacing-s;
 
-    @include breakpoint(0, $tablet) {
-      margin: $spacing-s;
-    }
+    // @include breakpoint(0, $tablet) {
+    //   margin: $spacing-s;
+    // }
 
     @include breakpoint($tablet) {
       padding-left: clamp-calc(#{$spacing-s}, 153px);

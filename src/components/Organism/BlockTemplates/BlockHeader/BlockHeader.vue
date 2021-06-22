@@ -29,7 +29,11 @@ export default defineComponent({
   @extend %block-base;
 
   &__button {
-    margin: $spacing-m 0 $spacing-l-2;
+    margin: $spacing-s 0 $spacing-m;
+
+    @include breakpoint($tablet) {
+      margin: $spacing-m 0 $spacing-l-2;
+    }
   }
 
   &__video {
