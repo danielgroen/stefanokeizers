@@ -1,7 +1,8 @@
 <template>
   <picture class="background-image">
     <source v-if="srcset" :srcset="srcset" media="(min-width: 752px)" />
-    <nuxt-img class="img" :src="src" :alt="alt" quality="80" format="webp" />
+    <img class="img" :src="src" :alt="alt" />
+    <!-- <nuxt-img class="img" :src="src" :alt="alt" quality="80" format="webp" /> -->
   </picture>
 </template>
 
