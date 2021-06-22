@@ -68,6 +68,7 @@ export default {
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
     '@nuxtjs/composition-api/module',
+    '@nuxt/image',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
   ],
@@ -82,7 +83,6 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/gtm',
     '@nuxtjs/robots',
-    '@nuxt/image',
     '@nuxtjs/component-cache',
     [
       'nuxt-font-loader-strategy',
