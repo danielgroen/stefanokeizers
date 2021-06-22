@@ -4,7 +4,7 @@
       <h1 class="block__title">{{ content.title }}</h1>
       <h2 class="block__subtitle">{{ content.subtitle }}</h2>
       <h3 class="block__header">{{ content.header }}</h3>
-      <nuxt-img class="img" src="/img/speeldata.jpg" alt="speeldata" />
+      <img class="img" src="/img/speeldata.jpg" alt="speeldata" />
       <!-- <nuxt-img
         class="img"
         src="/img/speeldata.jpg"
