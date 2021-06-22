@@ -1,5 +1,11 @@
 <template>
   <div id="contact" class="block">
+    <AtomImage
+      src="/img/contact-mobile.jpg"
+      srcset="/img/contact.jpg"
+      alt="Header foto"
+    />
+
     <h3 class="block__header">{{ content.title }}</h3>
     <AtomContactItem :items="content.contact" />
     <div class="socials">

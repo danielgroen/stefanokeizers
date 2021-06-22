@@ -1,5 +1,11 @@
 <template>
   <div id="media" class="block">
+    <AtomImage
+      src="/img/media-mobile.jpg"
+      srcset="/img/media-desktop.jpg"
+      alt="Header foto"
+    />
+
     <h3 class="block__header">{{ content.title }}</h3>
     <div class="media-items">
       <AtomMediaItem

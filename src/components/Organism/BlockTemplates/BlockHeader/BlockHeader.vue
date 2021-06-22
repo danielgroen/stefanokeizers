@@ -1,5 +1,7 @@
 <template>
   <div id="home" class="block">
+    <AtomImage src="/img/header-withVideo.jpg" alt="Header foto" />
+
     <h1 class="block__title">{{ content.title }}</h1>
     <h2 class="block__subtitle">{{ content.subtitle }}</h2>
     <AtomButton class="block__button" :to="content.button.to" icon="chevron">

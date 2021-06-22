@@ -50,7 +50,7 @@ export default defineComponent({
   margin-bottom: $spacing-l;
 
   .block {
-    background: $red;
+    // background: $red;
     color: $white;
     padding: clamp-calc(48px, 80px) $spacing-s;
 

@@ -82,6 +82,7 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/gtm',
     '@nuxtjs/robots',
+    '@nuxt/image',
     '@nuxtjs/component-cache',
     [
       'nuxt-font-loader-strategy',
