@@ -4,13 +4,14 @@
       <h1 class="block__title">{{ content.title }}</h1>
       <h2 class="block__subtitle">{{ content.subtitle }}</h2>
       <h3 class="block__header">{{ content.header }}</h3>
-      <nuxt-img
+      <nuxt-img class="img" src="/img/speeldata.jpg" alt="speeldata" />
+      <!-- <nuxt-img
         class="img"
         src="/img/speeldata.jpg"
         alt="speeldata"
         quality="80"
         format="webp"
-      />
+      /> -->
     </div>
     <iframe
       class="block__iframe"
