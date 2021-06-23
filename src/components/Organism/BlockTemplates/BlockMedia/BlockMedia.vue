@@ -40,7 +40,7 @@ export default defineComponent({
 .block {
   @extend %block-base;
 
-  @include breakpoint(0, #{$tablet}) {
+  @include breakpoint(0, $tablet) {
     .image {
       ::v-deep {
         img {
@@ -56,6 +56,7 @@ export default defineComponent({
     width: 100%;
     gap: 8px 0;
   }
+
   @include breakpoint($tablet) {
     .media-items {
       flex-direction: row;
