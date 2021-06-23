@@ -1,6 +1,10 @@
 <template>
   <div id="home" class="block">
-    <AtomImage src="/img/header-withVideo.jpg" alt="Header foto" />
+    <AtomImage
+      class="image"
+      src="/img/header-withVideo.jpg"
+      alt="Header foto"
+    />
 
     <h1 class="block__title">{{ content.title }}</h1>
     <h2 class="block__subtitle">{{ content.subtitle }}</h2>
@@ -29,6 +33,12 @@ export default defineComponent({
 <style lang="scss" scoped>
 .block {
   @extend %block-base;
+
+  @include breakpoint($tablet) {
+    .image {
+      padding-left: 40px;
+    }
+  }
 
   &__button {
     margin: $spacing-s 0 $spacing-m;

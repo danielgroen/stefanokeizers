@@ -1,8 +1,9 @@
 <template>
   <div id="media" class="block">
     <AtomImage
-      src="/img/media-mobile.jpg"
+      class="image"
       srcset="/img/media-desktop.jpg"
+      src="/img/media-mobile.jpg"
       alt="Header foto"
     />
 
@@ -38,6 +39,16 @@ export default defineComponent({
 <style lang="scss" scoped>
 .block {
   @extend %block-base;
+
+  @include breakpoint(0, #{$tablet}) {
+    .image {
+      ::v-deep {
+        img {
+          transform: scale(1.3) translateY(-5px) translateX(-20px);
+        }
+      }
+    }
+  }
 
   .media-items {
     display: flex;

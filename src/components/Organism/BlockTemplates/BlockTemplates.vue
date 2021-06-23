@@ -47,16 +47,13 @@ export default defineComponent({
 .blocks {
   display: grid;
   gap: $spacing-l 0;
-  margin-bottom: $spacing-l;
 
+  @include breakpoint($tablet) {
+    margin-bottom: $spacing-xxl;
+  }
   .block {
-    // background: $red;
     color: $white;
     padding: clamp-calc(48px, 80px) $spacing-s;
-
-    // @include breakpoint(0, $tablet) {
-    //   margin: $spacing-s;
-    // }
 
     @include breakpoint($tablet) {
       padding-left: clamp-calc(#{$spacing-s}, 153px);
