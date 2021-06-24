@@ -13,8 +13,8 @@
         v-for="(item, index) in content.media_items"
         :key="`media-item--${index}`"
         class="media-item"
+        :type="item.type"
         :title="item.text"
-        :type="item.text"
         :link="item.url"
       />
     </div>
