@@ -20,9 +20,9 @@
           "url": "https://www.2doc.nl/documentaires/series/3doc/2020/mijn-naam-is-stefano-keizers.html"
         },
         {
-          "type": "TV-programma  •  Videoland",
-          "text": "Het Perfecte Plaatje",
-          "url": "https://www.videoland.com/series/1099/het-perfecte-plaatje/3823"
+          "type": "boek  •  Lebowski publishers",
+          "text": "Twee Luitenanten",
+          "url": "https://lebowskipublishers.nl/boek/Twee-Luitenanten-T11796.html"
         },
         {
           "type": "Documentaire  •  Videoland",
@@ -30,24 +30,14 @@
           "url": "https://www.videoland.com/player/84661/stefano-keizers/500159"
         },
         {
-          "type": "TV-Serie  •  NPO 3",
-          "text": "Herres",
-          "url": "https://www.npo3.nl/hallosintervalenkerst-nieuw-herres-7/05-04-2021/WO_POWN_16409909"
-        },
-        {
-          "type": "TV-Programma  •  NPO 3",
-          "text": "Experimensen",
-          "url": "https://www.npo3.nl/experimensen/AT_2107362"
-        },
-        {
-          "type": "boek  •  Lebowski publishers",
-          "text": "Twee Luitenanten",
-          "url": "https://lebowskipublishers.nl/boek/Twee-Luitenanten-T11796.html"
-        },
-        {
           "type": "tv-programma  •  AVROTROS",
           "text": "Maestro",
           "url": "https://www.youtube.com/watch?v=LqPM_oiA6m0&list=PL_Iu3jNPL3fI5Yshb8EytNLbkmCpJGyxy"
+        },
+        {
+          "type": "TV-Serie  •  NPO 3",
+          "text": "Herres",
+          "url": "https://www.npo3.nl/hallosintervalenkerst-nieuw-herres-7/05-04-2021/WO_POWN_16409909"
         },
         {
           "type": "documentaire  •  PowNed",
@@ -55,9 +45,19 @@
           "url": "https://www.powned.tv/programmas/dit-is-niet-mijn-wereld-vriend/marco-kroon-vs-stefano-keizers"
         },
         {
+          "type": "TV-Programma  •  NPO 3",
+          "text": "Experimensen",
+          "url": "https://www.npo3.nl/experimensen/AT_2107362"
+        },
+        {
           "type": "interview  •  NPO 3",
           "text": "Tims^Tent ",
           "url": "https://www.vpro.nl/programmas/tims-tent/kijk/afleveringen/seizoen-3/stefano-keizers.html"
+        },
+        {
+          "type": "TV-programma  •  Videoland",
+          "text": "Het Perfecte Plaatje",
+          "url": "https://www.videoland.com/series/1099/het-perfecte-plaatje/3823"
         },
         {
           "type": "tv-programma  •  KRO-NCRV",

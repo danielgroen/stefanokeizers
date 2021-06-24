@@ -46,7 +46,8 @@ export default defineComponent({
   &__type {
     color: $gray;
     font-weight: 400;
-    font-size: clamp-calc(12px, 16px);
+    font-size: clamp-calc(12px, 14px);
+    margin-bottom: 2px;
     line-height: 1.28;
     text-transform: uppercase;
   }
