@@ -37,7 +37,7 @@ export default {
       { property: 'og:title', content: site.title },
       {
         property: 'og:image',
-        content: '/img/stefano-hoofd.jpg',
+        content: '/img/og-image.png',
       },
       { property: 'og:url', content: site.hostname },
       { property: 'og:type', content: 'website' },
