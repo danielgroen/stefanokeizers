@@ -1,4 +1,3 @@
-// import Vue, { Component } from 'vue'
 declare module '*.vue' {
   export default Vue
 }
