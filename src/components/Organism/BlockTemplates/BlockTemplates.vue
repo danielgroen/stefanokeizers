@@ -46,9 +46,10 @@ export default defineComponent({
 <style lang="scss" scoped>
 .blocks {
   display: grid;
-  gap: 32px 0;
+  gap: 12px 0;
 
   @include breakpoint($tablet) {
+    gap: 32px 0;
     margin-bottom: $spacing-xxl;
   }
   .block {
