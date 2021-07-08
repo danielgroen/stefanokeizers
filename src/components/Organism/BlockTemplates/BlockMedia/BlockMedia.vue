@@ -6,18 +6,8 @@
       src="/img/media-mobile.jpg"
       alt="Header foto"
     />
-
     <h3 class="block__header">{{ content.title }}</h3>
-    <div class="media-items">
-      <AtomMediaItem
-        v-for="(item, index) in content.media_items"
-        :key="`media-item--${index}`"
-        class="media-item"
-        :type="item.type"
-        :title="item.text"
-        :link="item.url"
-      />
-    </div>
+    <MoleculeMediaItemWrapper :items="content.media_items" />
   </div>
 </template>
 
@@ -47,24 +37,6 @@ export default defineComponent({
           transform: scale(1.3) translateY(-5px) translateX(-20px);
         }
       }
-    }
-  }
-
-  .media-items {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 8px 0;
-  }
-
-  @include breakpoint($tablet) {
-    .media-items {
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap: $spacing-s 32px;
-    }
-    .media-item {
-      flex: 0 0 calc(50% - #{$spacing-xl});
     }
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <a class="media-item" :href="link">
+  <a class="media-item" target="_blank" :href="link">
     <span class="media-item__type">{{ type }}</span>
     <span class="media-item__title">{{ title }}</span>
     <AtomSvg type="arrow" />

@@ -1,20 +1,40 @@
 <template>
-  <nuxt-link v-if="to" class="button" :to="to.toLowerCase()">
+  <nuxt-link
+    v-if="to"
+    :class="['button', `button--${type}`]"
+    :to="to.toLowerCase()"
+  >
     <slot />
   </nuxt-link>
+  <button
+    v-else
+    :class="['button', `button--${type}`, { active: active }]"
+    @click="active = !active"
+  >
+    <slot />
+  </button>
 </template>
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api'
-
+import { defineComponent, ref } from '@nuxtjs/composition-api'
+export const Types = ['normal', 'small']
 export default defineComponent({
   name: 'AtomButton',
   props: {
     to: {
       type: String,
-      required: true,
+      default: null,
+    },
+    type: {
+      type: String,
+      default: 'normal',
+      validator: (type: string) => !!Types.includes(type),
     },
   },
-  setup() {},
+  setup() {
+    const active = ref(false)
+
+    return { active }
+  },
 })
 </script>
 
@@ -24,46 +44,82 @@ export default defineComponent({
   align-items: center;
   box-shadow: $box-shadow-button;
   border-radius: 2px;
-  background-color: $white;
-  color: $black;
   font-weight: 600;
-  font-size: clamp-calc(16px, 24px);
   text-decoration: none;
   transition: transform $speed $cubic-bezier, color $speed $cubic-bezier,
     box-shadow $speed $cubic-bezier;
-  padding: 12px $spacing-m;
 
   ::v-deep {
     svg {
-      box-shadow: 0 0 8px rgba($red, 0.4);
-      border-radius: 9999px;
-      background-color: $white;
       margin-left: $spacing-s;
-      path {
-        transition: fill $speed $cubic-bezier;
-      }
     }
   }
 
   &:hover {
     box-shadow: $box-shadow-button--hover;
-    color: $red;
     transform: translateY(-2px);
+  }
+
+  &--small {
+    background-color: $black;
+    color: $white;
+    font-size: rem(18px);
+    padding: $spacing-s $spacing-m;
 
     ::v-deep {
-      svg path {
-        fill: $red;
+      svg {
+        box-sizing: border-box;
+        padding: 2px;
+        path {
+          fill: $white;
+        }
       }
+    }
+
+    &:hover {
+      background-color: #333;
+    }
+
+    &:active {
+      background-color: #444;
     }
   }
 
-  &:active {
-    color: $red-dark;
+  &--normal {
+    background-color: $white;
+    color: $black;
+    font-size: clamp-calc(16px, 24px);
+    padding: 12px $spacing-m;
 
     ::v-deep {
-      svg path {
-        box-shadow: 0 0 8px rgba($red-dark, 0.4);
-        fill: $red-dark;
+      svg {
+        box-shadow: 0 0 8px rgba($red, 0.4);
+        border-radius: 9999px;
+        background-color: $white;
+        path {
+          transition: fill $speed $cubic-bezier;
+        }
+      }
+    }
+
+    &:hover {
+      color: $red;
+
+      ::v-deep {
+        svg path {
+          fill: $red;
+        }
+      }
+    }
+
+    &:active {
+      color: $red-dark;
+
+      ::v-deep {
+        svg path {
+          box-shadow: 0 0 8px rgba($red-dark, 0.4);
+          fill: $red-dark;
+        }
       }
     }
   }

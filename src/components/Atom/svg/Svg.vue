@@ -5,11 +5,12 @@
 import { defineComponent, computed } from '@nuxtjs/composition-api'
 
 import arrow from '~/assets/svg/chevron.svg?raw'
+import arrowDown from '~/assets/svg/chevron-down.svg?raw'
 import facebook from '~/assets/svg/facebook.svg?raw'
 import instagram from '~/assets/svg/instagram.svg?raw'
 import twitter from '~/assets/svg/twitter.svg?raw'
 
-export const Icons: any = { arrow, facebook, instagram, twitter }
+export const Icons: any = { arrow, arrowDown, facebook, instagram, twitter }
 export default defineComponent({
   name: 'AtomSvg',
   props: {
