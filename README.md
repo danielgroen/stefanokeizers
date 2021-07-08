@@ -10,7 +10,7 @@
 
 | Statements                  | Branches                | Functions                 | Lines             |
 | --------------------------- | ----------------------- | ------------------------- | ----------------- |
-| ![Statements](https://img.shields.io/badge/statements-38.1%25-red.svg) | ![Branches](https://img.shields.io/badge/branches-100%25-brightgreen.svg) | ![Functions](https://img.shields.io/badge/functions-33.33%25-red.svg) | ![Lines](https://img.shields.io/badge/lines-38.1%25-red.svg) |
+| ![Statements](https://img.shields.io/badge/statements-37.5%25-red.svg) | ![Branches](https://img.shields.io/badge/branches-50%25-red.svg) | ![Functions](https://img.shields.io/badge/functions-33.33%25-red.svg) | ![Lines](https://img.shields.io/badge/lines-37.5%25-red.svg) |
 
 
 ## Build Setup

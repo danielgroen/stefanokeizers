@@ -37,11 +37,13 @@ export default defineComponent({
 <style lang="scss">
 .nav-item {
   position: relative;
-  color: $gray;
+  color: $white;
   font-weight: 600;
+  font-size: clamp-calc(16px, 20px);
   text-transform: uppercase;
   text-decoration: none;
-  transition: color $speed $cubic-bezier;
+  opacity: 0.9;
+  transition: opacity $speed $cubic-bezier;
 
   &::after {
     content: '';
@@ -50,16 +52,16 @@ export default defineComponent({
     left: 50%;
     width: 0;
     height: 2px;
-    background-color: $red;
+    background-color: $white;
     transition: left $speed $cubic-bezier, width $speed $cubic-bezier;
   }
 
   &:hover {
-    color: $gray-dark;
+    opacity: 1;
   }
 
   &--active {
-    color: $black;
+    opacity: 1;
 
     &:first-child,
     &:last-child {

@@ -11,12 +11,13 @@
     :class="['button', `button--${type}`, { active: active }]"
     @click="active = !active"
   >
-    <slot />
+    {{ buttonPlaceholder }}<AtomSvg type="arrowDown" />
   </button>
 </template>
 <script lang="ts">
-import { defineComponent, ref } from '@nuxtjs/composition-api'
+import { defineComponent, computed, ref } from '@nuxtjs/composition-api'
 export const Types = ['normal', 'small']
+
 export default defineComponent({
   name: 'AtomButton',
   props: {
@@ -33,7 +34,11 @@ export default defineComponent({
   setup() {
     const active = ref(false)
 
-    return { active }
+    const buttonPlaceholder = computed(() => {
+      return active.value === false ? 'Meer media' : 'Minder media'
+    })
+
+    return { active, buttonPlaceholder }
   },
 })
 </script>
@@ -42,15 +47,18 @@ export default defineComponent({
 .button {
   display: inline-flex;
   align-items: center;
+  align-self: flex-start;
   box-shadow: $box-shadow-button;
   border-radius: 2px;
   font-weight: 600;
   text-decoration: none;
+  padding: $spacing-s $spacing-m;
   transition: transform $speed $cubic-bezier, color $speed $cubic-bezier,
     box-shadow $speed $cubic-bezier;
 
   ::v-deep {
     svg {
+      transition: transform $speed $cubic-bezier;
       margin-left: $spacing-s;
     }
   }
@@ -64,14 +72,22 @@ export default defineComponent({
     background-color: $black;
     color: $white;
     font-size: rem(18px);
-    padding: $spacing-s $spacing-m;
 
     ::v-deep {
       svg {
         box-sizing: border-box;
         padding: 2px;
+
         path {
           fill: $white;
+        }
+      }
+    }
+
+    &.active {
+      ::v-deep {
+        svg {
+          transform: rotate(180deg);
         }
       }
     }
@@ -88,10 +104,11 @@ export default defineComponent({
   &--normal {
     background-color: $white;
     color: $black;
-    font-size: clamp-calc(16px, 24px);
-    padding: 12px $spacing-m;
+    font-size: clamp-calc(18px, 24px);
 
+    /* stylelint-disable-next-line */
     ::v-deep {
+      /* stylelint-disable-next-line */
       svg {
         box-shadow: 0 0 8px rgba($red, 0.4);
         border-radius: 9999px;
