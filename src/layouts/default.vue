@@ -1,6 +1,5 @@
 <template>
   <main class="layout layout--default">
-    <MoleculeNav />
     <Nuxt />
   </main>
 </template>

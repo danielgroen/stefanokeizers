@@ -11,8 +11,4 @@ describe('🧪 NavItem', () => {
   test(`is here"`, () => {
     expect(wrapper).toBeTruthy()
   })
-
-  test(`is here 2"`, () => {
-    expect(wrapper).toBeTruthy()
-  })
 })

@@ -1,9 +1,9 @@
 <template>
   <div class="nav">
-    <AtomNavItem title="Home" to="/#home" />
-    <AtomNavItem title="Media" to="/#Media" />
-    <AtomNavItem title="Contact" to="/#Contact" />
-    <AtomNavItem title="Speeldata" to="/speeldata/" />
+    <AtomNavItem title="Home" :active="active" to="/" />
+    <AtomNavItem title="Media" :active="active" to="/#Media" />
+    <AtomNavItem title="Contact" :active="active" to="/#Contact" />
+    <AtomNavItem title="Speeldata" :active="active" to="/speeldata/" />
   </div>
 </template>
 <script lang="ts">
@@ -11,6 +11,12 @@ import { defineComponent } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   name: 'MoleculeNav',
+  props: {
+    active: {
+      type: String,
+      required: true,
+    },
+  },
   setup() {},
 })
 </script>

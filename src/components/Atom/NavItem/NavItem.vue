@@ -1,18 +1,16 @@
 <template>
-  <nuxt-link
-    v-if="title && activeItem"
+  <a
+    v-if="active && title"
     :class="[
       'nav-item',
-      { 'nav-item--active': title.toLowerCase() === activeItem.toLowerCase() },
+      { 'nav-item--active': active.toLowerCase() === title.toLowerCase() },
     ]"
-    :to="to.toLowerCase()"
-    @click.native="updateActiveItem(title)"
-    >{{ title }}</nuxt-link
-  >
+    :href="to ? to.toLowerCase() : ''"
+    >{{ title }}
+  </a>
 </template>
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
-import useActiveItem from '~/composables/useActiveItem'
 
 export default defineComponent({
   name: 'AtomNavItem',
@@ -21,16 +19,16 @@ export default defineComponent({
       type: String,
       required: true,
     },
+    active: {
+      type: String,
+      default: '',
+    },
     to: {
       type: String,
       required: true,
     },
   },
-  setup() {
-    const { activeItem, updateActiveItem } = useActiveItem()
-
-    return { activeItem, updateActiveItem }
-  },
+  setup() {},
 })
 </script>
 
