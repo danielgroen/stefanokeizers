@@ -24,7 +24,6 @@
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
 
-// TODO:: props omzetten naar composables
 export default defineComponent({
   name: 'OrganismBlockHeader',
   props: {
@@ -42,6 +41,16 @@ export default defineComponent({
 
   &__title {
     margin-bottom: clamp-calc(24px, 32px);
+  }
+
+  .image {
+    @include breakpoint(0, $tablet) {
+      ::v-deep {
+        img {
+          transform: scale(1.6) translateY(-30px) translateX(-5px);
+        }
+      }
+    }
   }
 
   .introduction {
@@ -74,10 +83,11 @@ export default defineComponent({
   }
 
   &__button {
-    margin: 32px 0 $spacing-m;
+    margin-top: 32px;
+    // margin: 32px 0 $spacing-m;
 
     @include breakpoint($tablet) {
-      margin: 32px 0 $spacing-l-2;
+      // margin: 32px 0 $spacing-l-2;
     }
   }
 

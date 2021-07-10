@@ -30,11 +30,11 @@ export default defineComponent({
 .block {
   @extend %block-base;
 
-  @include breakpoint(0, $tablet) {
-    .image {
+  .image {
+    @include breakpoint(0, $tablet) {
       ::v-deep {
         img {
-          transform: scale(1.3) translateY(-5px) translateX(-20px);
+          transform: scale(1.8) translateY(60px) translateX(0);
         }
       }
     }
