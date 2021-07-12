@@ -151,7 +151,7 @@ export default {
 
   robots: {
     UserAgent: '*',
-    Disallow: '/',
+    allow: '*',
     Sitemap: `${site.hostname}/sitemap.xml`,
   },
 
