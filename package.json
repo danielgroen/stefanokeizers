@@ -29,7 +29,6 @@
     "@nuxt/content": "^1.14.0",
     "@nuxtjs/component-cache": "^1.1.6",
     "@nuxtjs/composition-api": "^0.24.4",
-    "@nuxtjs/gtm": "^2.4.0",
     "@nuxtjs/svg": "^0.1.12",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/github": "^7.2.3",

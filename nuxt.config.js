@@ -45,6 +45,20 @@ export default {
       { property: 'og:site_name', content: site.title },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    script: [
+      {
+        innerHTML:
+          "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-106728519-1');",
+        type: 'text/javascript',
+        charset: 'utf-8',
+      },
+      {
+        async: true,
+        type: 'text/javascript',
+        charset: 'utf-8',
+        src: 'https://www.googletagmanager.com/gtag/js?id=UA-106728519-1',
+      },
+    ],
   },
 
   env: {
@@ -81,7 +95,6 @@ export default {
     '@nuxtjs/sitemap',
     '@nuxt/content',
     '@nuxtjs/style-resources',
-    '@nuxtjs/gtm',
     '@nuxtjs/robots',
     '@nuxtjs/component-cache',
     [
@@ -128,10 +141,6 @@ export default {
     ],
   ],
 
-  gtm: {
-    id: 'UA-106728519-1',
-  },
-
   styleResources: {
     scss: [
       '~/assets/scss/variables/_index.scss',
@@ -151,7 +160,7 @@ export default {
 
   robots: {
     UserAgent: '*',
-    allow: '*',
+    allow: '/',
     Sitemap: `${site.hostname}/sitemap.xml`,
   },
 
