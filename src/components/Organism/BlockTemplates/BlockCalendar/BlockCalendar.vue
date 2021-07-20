@@ -40,7 +40,7 @@ export default defineComponent({
 .block {
   @extend %block-base;
 
-  height: calc(100vh - 53%);
+  // height: calc(100vh - 53%);
   background-color: $red;
 
   .heading {
@@ -60,8 +60,12 @@ export default defineComponent({
   }
   &__iframe {
     width: 100%;
-    height: 100%;
+    height: 11000px;
     background-color: $white;
+
+    @include breakpoint($desktop) {
+      height: 7000px;
+    }
   }
 }
 </style>
