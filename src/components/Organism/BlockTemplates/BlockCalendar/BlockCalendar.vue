@@ -60,7 +60,7 @@ export default defineComponent({
   }
   &__iframe {
     width: 100%;
-    height: 11000px;
+    height: 10836px;
     background-color: $white;
 
     @include breakpoint(672px) {
