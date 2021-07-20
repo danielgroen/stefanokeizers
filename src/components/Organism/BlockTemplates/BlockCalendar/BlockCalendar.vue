@@ -63,7 +63,7 @@ export default defineComponent({
     height: 11000px;
     background-color: $white;
 
-    @include breakpoint(960px) {
+    @include breakpoint(672px) {
       height: 7000px;
     }
   }
