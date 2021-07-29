@@ -42,6 +42,11 @@ export default defineComponent({
   text-decoration: none;
   opacity: 0.9;
   transition: opacity $speed $cubic-bezier;
+  margin-right: $spacing-l;
+
+  &:last-child {
+    margin-right: 0;
+  }
 
   &::after {
     content: '';

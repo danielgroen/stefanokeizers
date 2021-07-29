@@ -23,10 +23,8 @@ export default defineComponent({
 
 <style lang="scss">
 .nav {
-  display: grid;
   display: flex;
   justify-content: center;
-  gap: $spacing-l;
   padding: $spacing-m 0;
   background-color: $red;
   margin-bottom: 12px;
