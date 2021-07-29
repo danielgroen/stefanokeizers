@@ -65,22 +65,15 @@ export default defineComponent({
 
   &__inner {
     .section {
-      display: flex;
-      flex-direction: column;
+      display: grid;
       max-height: 100%;
-      gap: $gap 0;
       margin-bottom: $gap;
+      gap: $gap 0;
 
       @include breakpoint($tablet) {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: $spacing-s 32px;
         margin-bottom: $spacing-s;
-
-        .media-item {
-          flex: 1 0 calc(50% - #{$spacing-xl});
-        }
       }
     }
     &.closed {
