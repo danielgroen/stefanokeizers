@@ -7,17 +7,13 @@
     />
 
     <h1 class="block__title">{{ content.title }}</h1>
-    <!-- <h2 class="block__subtitle">{{ content.subtitle }}</h2> -->
-    <!-- <iframe class="block__video" :src="content.video" frameborder="0"></iframe> -->
-
-    <div class="introduction">
-      <span class="introduction__label">Nieuwe Voorstelling:</span>
-      <h2 class="block__subtitle">{{ content.subtitle }}</h2>
-    </div>
+    <h2 class="block__subtitle">{{ content.subtitle }}</h2>
 
     <AtomButton class="block__button" :to="content.button.to" icon="chevron">
       {{ content.button.text }}<AtomSvg type="arrow" />
     </AtomButton>
+
+    <iframe class="block__video" :src="content.video" frameborder="0"></iframe>
   </div>
 </template>
 
@@ -53,29 +49,6 @@ export default defineComponent({
     }
   }
 
-  .introduction {
-    display: flex;
-    flex-direction: column;
-    border-left: clamp-calc(2px, 4px) solid $white;
-    padding-left: clamp-calc(8px, 16px);
-
-    &__label {
-      font-size: clamp-calc(14px, 20px);
-      font-style: italic;
-      line-height: 0.8rem;
-    }
-
-    .block__subtitle {
-      line-height: 1.2rem;
-      margin-top: clamp-calc(5px, 24px);
-
-      @include breakpoint($tablet) {
-        margin-top: clamp-calc(5px, 24px);
-        line-height: 3rem;
-      }
-    }
-  }
-
   @include breakpoint($tablet) {
     .image {
       padding-left: 40px;
@@ -83,11 +56,10 @@ export default defineComponent({
   }
 
   &__button {
-    margin-top: 32px;
-    // margin: 32px 0 $spacing-m;
+    margin: 32px 0 $spacing-m;
 
     @include breakpoint($tablet) {
-      // margin: 32px 0 $spacing-l-2;
+      margin: 32px 0 $spacing-l-2;
     }
   }
 
