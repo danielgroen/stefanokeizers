@@ -43,7 +43,14 @@ export default defineComponent({
     @include breakpoint(0, $tablet) {
       ::v-deep {
         img {
-          transform: scale(1.6) translateY(-30px) translateX(-5px);
+          transform: scale(1.4) translateY(-65px) translateX(-5px);
+        }
+      }
+    }
+    @include breakpoint($tablet, $desktop) {
+      ::v-deep {
+        img {
+          transform: scale(1.4) translateY(-85px) translateX(-5px);
         }
       }
     }
