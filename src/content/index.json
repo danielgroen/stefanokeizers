@@ -2,13 +2,12 @@
   "content": [
     {
       "block": "head",
-      "title": "Stefano Keizers",
-      "subtitle": "Hans Teeuwen",
+      "title": "Stefano Keizers = Niet meer",
+      "subtitle": "13 oktober 2015 - 12 maart 2023",
       "button": {
         "text": "Speeldata",
         "to": "/speeldata/"
-      },
-      "video": "https://www.youtube.com/embed/htsNRDbl64g"
+      }
     },
     {
       "block": "media",

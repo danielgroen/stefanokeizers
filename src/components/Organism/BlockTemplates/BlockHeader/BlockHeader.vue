@@ -13,7 +13,7 @@
       {{ content.button.text }}<AtomSvg type="arrow" />
     </AtomButton>
 
-    <iframe class="block__video" :src="content.video" frameborder="0"></iframe>
+    <!-- <iframe class="block__video" :src="content.video" frameborder="0"></iframe> -->
   </div>
 </template>
 
