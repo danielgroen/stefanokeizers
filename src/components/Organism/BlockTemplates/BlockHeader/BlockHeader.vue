@@ -9,9 +9,10 @@
     <h1 class="block__title">{{ content.title }}</h1>
     <h2 class="block__subtitle">{{ content.subtitle }}</h2>
 
-    <AtomButton class="block__button" :to="content.button.to" icon="chevron">
-      {{ content.button.text }}<AtomSvg type="arrow" />
-    </AtomButton>
+    <h3 class="block__outbound">
+      Ga allemaal naar <a href="https://donnyronny.nl">DONNYRONNY.NL</a> voor de
+      toekomst!
+    </h3>
 
     <!-- <iframe class="block__video" :src="content.video" frameborder="0"></iframe> -->
   </div>
@@ -43,14 +44,14 @@ export default defineComponent({
     @include breakpoint(0, $tablet) {
       ::v-deep {
         img {
-          transform: scale(1.4) translateY(-65px) translateX(-5px);
+          transform: scale(1.4) translateY(-25px) translateX(-5px);
         }
       }
     }
     @include breakpoint($tablet, $desktop) {
       ::v-deep {
         img {
-          transform: scale(1.4) translateY(-85px) translateX(-5px);
+          transform: scale(1.4) translateY(-40px) translateX(-5px);
         }
       }
     }

@@ -17,6 +17,16 @@
     font-size: clamp-calc(24px, 56px);
     line-height: 1.25;
   }
+  .block__outbound {
+    font-size: clamp-calc(22px, 40px);
+    line-height: 1;
+    margin-top: clamp-calc(16px, 24px);
+
+    a {
+      color: white;
+      font-weight: 700;
+    }
+  }
 
   .block__header {
     width: 100%;
